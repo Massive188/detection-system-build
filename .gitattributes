@@ -57,7 +57,7 @@ digitalWrite(trigPin,LOW);
 
 //Read the echo Signal
 duration=pulseIn(echoPin,HIGH);//Read duration for roundtrip distance.
-distance = (duration / 2) * 0.0135 ;//Convert duration to one way distance to one way distacne in units of inches
+distance=(duration / 2) * 0.0135 ;//Convert duration to one way distance to one way distacne in units of inches
 
 if(distance < 100 ){//filter noise to show reading only less than 200
 Serial.println(distance);//print distance.
