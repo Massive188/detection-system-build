@@ -1,23 +1,20 @@
-
-#define Bled 5
-#define Gled 4
-#define Yled 3
-#define Rled 2 
-#define buzzer 6
-#define trigPin 12 
-#define echoPin 13
-#define photocell A0
-#define RGBb 34
-
-
 void setup() {
   // put your setup code here, to run once:
 Serial.begin(9600); //set baud connection 
 Serial.println("CEIS101 Course Project Module 8");
 Serial.println("Name: ALLENDRY ROQUE DIAZ");
 
+#define Bluled 1
+#define Gled 2
+#define Yled 3 
+#define Rled 4
+#define buzzer 5 
+#define trigPin 6 
+#define echoPin 8
+#define RGBb 7 
+#define photocell 11
 
-pinMode(Bled,OUTPUT);
+pinMode(Bluled,OUTPUT);
 pinMode(Gled,OUTPUT);
 pinMode(Yled,OUTPUT);
 pinMode(Rled,OUTPUT);
@@ -59,7 +56,7 @@ digitalWrite(trigPin,LOW);
 
 
 //Read the echo Signal
-duration=pulseIn(echoPin, HIGH);//Read duration for roundtrip distance.
+duration=pulseIn(echoPin,HIGH);//Read duration for roundtrip distance.
 distance = (duration / 2) * 0.0135 ;//Convert duration to one way distance to one way distacne in units of inches
 
 if(distance < 100 ){//filter noise to show reading only less than 200
@@ -70,7 +67,7 @@ if (distance <= 6){//Alert Conditions
   digitalWrite(Rled ,HIGH); //Alerting conditions
   digitalWrite(Yled,LOW);
   digitalWrite(Gled,LOW);
-  digitalWrite(Bled,LOW);
+  digitalWrite(Bluled,LOW);
   tone(buzzer,1000,500); 
 
  }
@@ -79,7 +76,7 @@ if (distance <= 6){//Alert Conditions
   digitalWrite(Rled,LOW);
   digitalWrite(Yled,HIGH);
   digitalWrite(Gled,LOW);
-  digitalWrite(Bled,LOW);  
+  digitalWrite(Bluled,LOW);  
 
   tone(buzzer,50,100);//emit tone at 300 hz of 400milliseconds.
  }  
@@ -89,17 +86,17 @@ if(distance< 40 and distance>20){ //Warning object too close
   digitalWrite(Rled,LOW);
   digitalWrite(Yled,LOW);
   digitalWrite(Gled,HIGH);//safe
-  digitalWrite(Bled,LOW);
+  digitalWrite(Bluled,LOW);
   
   
 tone(buzzer,50,100);//emits tone at 300hz of 400 milliseconds. 
    }
    
-  if(distance<68 and distance>36){
+  if(distance<68 and distance> 36){
   digitalWrite(Rled,LOW);
   digitalWrite(Yled,LOW);
   digitalWrite(Gled,LOW);
-  digitalWrite(Bled,HIGH);
+  digitalWrite(Bluled,HIGH);
 
 }//end of else
 
@@ -107,14 +104,3 @@ delay(1000);
 }
 //RGB LIGHT Sensor
   //=== Automated Light === 
-
-  
-   
-   
-   
-
-
-
-  
-  
-  
