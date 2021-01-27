@@ -1,6 +1,6 @@
 void setup() {
   // put your setup code here, to run once:
-Serial.begin(9600); //set baud connection 
+Serial.begin(9600); /*set baud connection*/ 
 Serial.println("CEIS101 Course Project Module 8");
 Serial.println("Name: ALLENDRY ROQUE DIAZ");
 
