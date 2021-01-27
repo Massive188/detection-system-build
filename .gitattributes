@@ -1,6 +1,6 @@
 void setup() {
 
-Serial.begin(9600); //set baud connection 
+Serial.begin(9600); // get baud connection 
 Serial.println("Name: ALLENDRY ROQUE DIAZ");
 
 #define Bled 1
