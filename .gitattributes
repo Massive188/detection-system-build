@@ -1,7 +1,6 @@
 void setup() {
-  // put your setup code here, to run once:
-Serial.begin(9600); /*set baud connection*/ 
-Serial.println("CEIS101 Course Project Module 8");
+
+Serial.begin(9600); //set baud connection 
 Serial.println("Name: ALLENDRY ROQUE DIAZ");
 
 #define Bled 1
@@ -55,7 +54,7 @@ delayMicroseconds(10);
 digitalWrite(trigPin,LOW);
 
 
-//Read the echo Signal
+//Reads the echo Signal
 duration=pulseIn(echoPin,HIGH);//Read duration for roundtrip distance.
 distance=(duration / 2) * 0.0135 ;//Convert duration to one way distance to one way distacne in units of inches
 
