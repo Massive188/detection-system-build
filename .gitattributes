@@ -4,7 +4,7 @@ Serial.begin(9600); // set baud connection
 Serial.println("CEIS101 Course Project Module 8");
 Serial.println("Name: ALLENDRY ROQUE DIAZ");
 
-#define Bluled 1
+#define Bled 1
 #define Gled 2
 #define Yled 3 
 #define Rled 4
@@ -14,7 +14,7 @@ Serial.println("Name: ALLENDRY ROQUE DIAZ");
 #define RGBb 7 
 #define photocell 11
 
-pinMode(Bluled,OUTPUT);
+pinMode(Bled,OUTPUT);
 pinMode(Gled,OUTPUT);
 pinMode(Yled,OUTPUT);
 pinMode(Rled,OUTPUT);
@@ -67,7 +67,7 @@ if (distance <= 6){//Alert Conditions
   digitalWrite(Rled ,HIGH); //Alerting conditions
   digitalWrite(Yled,LOW);
   digitalWrite(Gled,LOW);
-  digitalWrite(Bluled,LOW);
+  digitalWrite(Bled,LOW);
   tone(buzzer,1000,500); 
 
  }
@@ -76,7 +76,7 @@ if (distance <= 6){//Alert Conditions
   digitalWrite(Rled,LOW);
   digitalWrite(Yled,HIGH);
   digitalWrite(Gled,LOW);
-  digitalWrite(Bluled,LOW);  
+  digitalWrite(Bled,LOW);  
 
   tone(buzzer,50,100);//emit tone at 300 hz of 400milliseconds.
  }  
@@ -86,7 +86,7 @@ if(distance< 40 and distance>20){ //Warning object too close
   digitalWrite(Rled,LOW);
   digitalWrite(Yled,LOW);
   digitalWrite(Gled,HIGH);//safe
-  digitalWrite(Bluled,LOW);
+  digitalWrite(Bled,LOW);
   
   
 tone(buzzer,50,100);//emits tone at 300hz of 400 milliseconds. 
@@ -96,7 +96,7 @@ tone(buzzer,50,100);//emits tone at 300hz of 400 milliseconds.
   digitalWrite(Rled,LOW);
   digitalWrite(Yled,LOW);
   digitalWrite(Gled,LOW);
-  digitalWrite(Bluled,HIGH);
+  digitalWrite(Bled,HIGH);
 
 }//end of else
 
