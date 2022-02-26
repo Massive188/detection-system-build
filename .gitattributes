@@ -1,7 +1,5 @@
 void setup() {
 
-Serial.begin(9600); 
-
 #define Bled 1
 #define Gled 2
 #define Yled 3 
@@ -12,6 +10,7 @@ Serial.begin(9600);
 #define RGBb 7 
 #define photocell 11
 
+Serial.begin(9600); 
 pinMode(Bled,OUTPUT);
 pinMode(Gled,OUTPUT);
 pinMode(Yled,OUTPUT);
